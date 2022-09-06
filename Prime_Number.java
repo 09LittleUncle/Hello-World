@@ -1,14 +1,14 @@
-import java.util.Scanner;	//JavaÊäÈë
+import java.util.Scanner;	//Javaè¾“å…¥
 
 public class Prime_Number {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//·Ö½âÖÊÒòÊı
+		//åˆ†è§£è´¨å› æ•°
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÇëÊäÈëÒ»¸öÕûÊı£º");
-        int number = sc.nextInt();
+		System.out.print("è¯·è¾“å…¥ä¸€ä¸ªæ•´æ•°ï¼š");
+        	int number = sc.nextInt();
 		
 		find(number);
 	}
@@ -27,13 +27,13 @@ public class Prime_Number {
 	
 	public static void find(int n) {
 		if(zhishu(n) != 0) {
-			System.out.println(n);		//Èç¹ûÆä±¾Éí¾ÍÊÇÖÊÊı£¬ÔòÖ±½ÓÊä³ö
+			System.out.println(n);		//å¦‚æœå…¶æœ¬èº«å°±æ˜¯è´¨æ•°ï¼Œåˆ™ç›´æ¥è¾“å‡º
 		}
 		else {
 			int i;
-			for(i = 2; zhishu(i) == 0 || n % i != 0; i++) ;	//´Ó2¿ªÊ¼Ñ°ÕÒÒ»¸ö ¼ÈÊÇÖÊÊıÓÖ¿ÉÒÔ½«¸ÃÕûÊıÕû³ıµÄÕûÊıi¡£
+			for(i = 2; zhishu(i) == 0 || n % i != 0; i++) ;	//ä»2å¼€å§‹å¯»æ‰¾ä¸€ä¸ª æ—¢æ˜¯è´¨æ•°åˆå¯ä»¥å°†è¯¥æ•´æ•°æ•´é™¤çš„æ•´æ•°iã€‚
 			System.out.print(i+"*");
-			find(n/i);					//½«¸ÃÕûÊı·Ö½â
+			find(n/i);					//å°†è¯¥æ•´æ•°åˆ†è§£
 		}
 	}
 }
